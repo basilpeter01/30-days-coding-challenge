@@ -1,0 +1,19 @@
+# C build artifacts
+*.exe
+*.out
+*.o
+*.obj
+
+# VS Code settings
+.vscode/
+
+# Debug and log files
+*.log
+
+# Backup files
+*.bak
+*.tmp
+
+# Common system files
+.DS_Store
+Thumbs.db

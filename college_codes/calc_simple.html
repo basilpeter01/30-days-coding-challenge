@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>calculator sample </title>
+        <style>            
+        #txt1, #txt2, #result {
+            width: 170px;
+            height: 30px;
+            background-color: rgb(243, 253, 236);
+            border-radius: 8px;
+            border: 2px solid black;    
+        }
+        #add, #sub,#div, #multi, #equal { 
+            background-color: rgb(215, 215, 215);
+            width: 30px;
+            height:30px;
+            border-radius:8px;
+            padding-left: 5px;
+            transition: background-color 0.3s ease-in-out; 
+        }
+        #add:hover, #sub:hover,#div:hover, #multi:hover, #equal:hover { 
+            background-color: rgb(162, 162, 162);
+            font-size: 20px;
+            color:rgb(255, 255, 255);
+            width: 35px;
+            height:35px;
+            border-radius:10px;
+            padding-left: 5px;
+            cursor:pointer;
+        }
+        #txt1:hover,#txt2:hover {
+            width:175px;
+            height:35px;
+            cursor:text;
+            background-color: rgb(226, 226, 226);
+        }
+        </style>
+
+        <script type="text/javascript">
+            var res;
+            function addition()
+             {
+                a=document.getElementById("txt1").value;
+                b=document.getElementById("txt2").value;
+                res=parseInt(a)+parseInt(b);
+                
+            }
+            function subtraction()
+             {
+                a=document.getElementById("txt1").value;
+                b=document.getElementById("txt2").value;
+                res=parseInt(a)-parseInt(b);
+                
+            }   
+            function multiplication()
+             {
+                a=document.getElementById("txt1").value;
+                b=document.getElementById("txt2").value;
+                res=parseInt(a)*parseInt(b);
+                
+            }   
+            function division()
+             {
+                a=document.getElementById("txt1").value;
+                b=document.getElementById("txt2").value;
+                res=parseInt(a)/parseInt(b);         
+            
+            }   
+            function disp()
+            {
+            document.getElementById("result").value=res;
+        }
+
+        </script>
+    </head>
+    <body>
+<br><br>
+        <form>
+        <div id="sect" style="width:169px; background-color:rgb(185, 199, 180); border-radius:10px; 
+        padding:10px; border-style:solid; border-color:rgb(0, 0, 0);">
+
+            <h3 align="center" style="height:8px; margin-top: 2px;">CALCULATOR</h3>
+            <input type="text" id="txt1" placeholder="first number"><br>
+
+            <input type="text" id="txt2" placeholder="second number"><br><br>
+            &nbsp;&nbsp;&nbsp;
+
+            <input type="button" id="add" value="+" onclick="addition()">
+            <input type="button" id="sub" value="-"onclick="subtraction()">
+            <input type="button" id="multi" value="x" onclick="multiplication()">
+            <input type=button id="div" value="/" onclick="division()"><br><br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           
+
+            <input type="button" id="equal" value="=" onclick="disp()" style="background-color:darkgray; cursor:progress" >
+            <br><br>
+            <input type="text" id="result" placeholder="0" readonly style="cursor:no-drop;">
+        </div>
+    </form>
+    </body>
+</html>
